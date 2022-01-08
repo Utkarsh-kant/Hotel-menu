@@ -1,0 +1,229 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+void breakfast();
+void lunch();
+void dinner();
+int selection, num, quantity;
+char ch = 'y';
+int burger = 20;
+int chicken = 250;
+int chapati = 10;
+int sandwitch = 30;
+int eggcurry = 150;
+int mixveg = 90;
+int aaluparatha = 40;
+int rice = 70;
+int briyani = 100;
+int cholaBhatora = 80;
+int mixdal = 100;
+int curry = 250;
+int aalugobi = 150;
+int vegbriyani = 100;
+int charge;
+int main()
+{
+   cout << "-------------------------------------------------------------------------------------" << endl;
+   cout << "********************************Welcome to the hotel*********************************" << endl;
+   cout << "-------------------------------------------------------------------------------------" << endl;
+   cout << "What would you like to have sir/maam" << endl;
+   cout << "1.Breakfast" << endl;
+   cout << "2.Lunch" << endl;
+   cout << "3.Dinner" << endl;
+   cout << "Enter your choice (1,2,3):- ";
+   cin >> num;
+
+   if (num == 1)
+   {
+      cout<<"Good Morning"<<endl;
+      cout << "Your choice is to have Breakfast" << endl;
+      breakfast();
+   }
+   if (num == 2)
+   {
+      cout<<"Good Afternoon"<<endl;
+      cout << "Your choice is to have Lunch" << endl;
+      lunch();
+   }
+   if (num == 3)
+   {
+      cout<<"Good Evening"<<endl;
+      cout << "Your choice is to have Dinner" << endl;
+      dinner();
+   }
+}
+void breakfast()
+{
+
+   do
+   {
+      cout << "1.burger.......................20$" << endl;
+      cout << "2.Sandwitch ...................30$" << endl;
+      cout << "3.aalu paratha ................40$" << endl;
+      cout << "4.chola bhatora ...............80$" << endl;
+      cout << "Enter your Breakfast choice:-";
+      cin >> selection;
+      cout << "Enter the Quantity of the prodct:-";
+      cin >> quantity;
+      if (selection == 1 && selection<8)
+      {
+         cout << "You have placed  an order of Burger" << endl;
+         charge = charge + quantity * burger;
+      }
+      if (selection == 2)
+      {
+         cout << "You have placed an order of SandWitch" << endl;
+         charge = charge + quantity * sandwitch;
+      }
+      if (selection == 3)
+      {
+         cout << "You have placed  an order of Aalu Paratha" << endl;
+         charge = charge + quantity * aaluparatha;
+      }
+      if (selection == 4)
+      {
+         cout << "You have placed an order of Chola Bhatora" << endl;
+         charge = charge + quantity * cholaBhatora;
+      }
+      else if (selection >= 8)
+      {
+         cout << "You have selected an invalid choice" << endl;
+
+         cout << "Enter your choice again:-";
+         cin >> selection;
+      }
+      cout << "Do you want to order anything else:-(y/n)";
+      cin >> ch;
+   } while (ch == 'Y' || ch == 'y');
+
+   cout << "Your total bill is:- " << charge<<endl;
+   cout<<"Thank you for visiting"<<endl;
+}
+
+void lunch()
+{
+   do
+   {
+      cout << "1.Chicken......................250$" << endl;
+      cout << "2.Egg curry....................150$" << endl;
+      cout << "3.Rice ........................70$" << endl;
+      cout << "4.Mix dal......................100$" << endl;
+      cout << "5.Chapati......................10$" << endl;
+      cout << "6.Mix veg......................90$" << endl;
+      cout << "7.Briyani......................100$" << endl;
+      cout << "Enter your choice:-";
+      cin >> selection;
+      cout << "Enter the Quantity of the prodct:-";
+      cin >> quantity;
+      if (selection == 1 && selection<8)
+      {
+         cout << "You have placed  an order of Chicken" << endl;
+         charge = charge + quantity * chicken;
+      }
+      if (selection == 2)
+      {
+         cout << "You have placed an order of Egg Curry" << endl;
+         charge = charge + quantity * eggcurry;
+      }
+      if (selection == 3)
+      {
+         cout << "You have placed  an order of Rice" << endl;
+         charge = charge + quantity * rice;
+      }
+      if (selection == 4)
+      {
+         cout << "You have placed an order of Mix Dal" << endl;
+         charge = charge + quantity * mixdal;
+      }
+      if (selection == 5)
+      {
+         cout << "You have placed  an order of Chapati" << endl;
+         charge = charge + quantity * chapati;
+      }
+      if (selection == 6)
+      {
+         cout << "You have placed an order of Mix veg" << endl;
+         charge = charge + quantity * mixveg;
+      }
+      if (selection == 7)
+      {
+         cout << "You have placed  an order of Briyani" << endl;
+         charge = charge + quantity * briyani;
+      }
+      else if (selection == 8)
+      {
+         cout << "You have selected an invalid option" << endl;
+         cout << "Enter your choice again:-";
+         cin >> selection;
+      }
+      cout << "Do you want to order anything else:-(y/n)";
+      cin >> ch;
+   } while (ch == 'Y' || ch == 'y');
+
+   cout << "Your total bill is:- " << charge<<endl;
+   cout<<"Thank you for visiting"<<endl;
+}
+
+void dinner()
+{
+   do
+   {
+      cout << "1.Curry........................250$" << endl;
+      cout << "2.Aalu Gobi....................150$" << endl;
+      cout << "3.Rice ........................70$" << endl;
+      cout << "4.Mix dal......................100$" << endl;
+      cout << "5.Chapati......................10$" << endl;
+      cout << "6.Mix veg......................90$" << endl;
+      cout << "7.veg Briyani..................100$" << endl;
+      cout << "Enter your choice:-";
+      cin >> selection;
+      cout << "Enter the Quantity of the prodct:-";
+      cin >> quantity;
+      if (selection == 1 && selection < 8)
+      {
+         cout << "You have placed  an order of Curry" << endl;
+         charge = charge + quantity * curry;
+      }
+      if (selection == 2)
+      {
+         cout << "You have placed an order of Aalu Gobi" << endl;
+         charge = charge + quantity * aalugobi;
+      }
+      if (selection == 3)
+      {
+         cout << "You have placed  an order of Rice" << endl;
+         charge = charge + quantity * rice;
+      }
+      if (selection == 4)
+      {
+         cout << "You have placed an order of Mix Dal" << endl;
+         charge = charge + quantity * mixdal;
+      }
+      if (selection == 5)
+      {
+         cout << "You have placed  an order of Chapati" << endl;
+         charge = charge + quantity * chapati;
+      }
+      if (selection == 6)
+      {
+         cout << "You have placed an order of Mix veg" << endl;
+         charge = charge + quantity * mixveg;
+      }
+      if (selection == 7)
+      {
+         cout << "You have placed an order of Veg Briyani" << endl;
+         charge = charge + quantity * vegbriyani;
+      }
+      else if (selection == 8)
+      {
+         cout << "You have enter an invalid choice" << endl;
+         cout << "Enter your choice again:-";
+         cin >> selection;
+      }
+      cout << "Do you want to order anything else:-(y/n)";
+      cin >> ch;
+   } while (ch == 'Y' || ch == 'y');
+
+   cout << "Your total bill is:- " << charge<<endl;
+   cout<<"Thank you for visiting"<<endl;
+}
